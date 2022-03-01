@@ -14,7 +14,19 @@ class myApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Learn Flutter'),
         ),
-        body: Text('Test'),
+        body: Column(
+          children: <Widget>[
+            Text('Test'),
+            RaisedButton(
+              child: Text('HI Ola'),
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('HI Ola 2'),
+              onPressed: null,
+            )
+          ],
+        ),
       ),
     );
   }
