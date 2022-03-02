@@ -8,7 +8,7 @@ void main() {
 
 class myApp extends StatelessWidget {
   void answerQuestion() {
-    
+    print('This is Flutter!');
   }
 
   @override
@@ -27,7 +27,13 @@ class myApp extends StatelessWidget {
             ),
             RaisedButton(
               child: Text('HI Ola 2'),
-              onPressed: null,
+              onPressed: () => print('Hi Flutter!'), // Shortcut
+            ),
+            RaisedButton(
+              child: Text('HI Ola 2'),
+              onPressed: () {
+                // Longer functions
+              },
             )
           ],
         ),
