@@ -6,13 +6,20 @@ void main() {
   runApp(myApp());
 }
 
+// void main => runApp(myApp());
+
 class myApp extends StatelessWidget {
+  var questionIndex = 0;
+
   void answerQuestion() {
-    print('This is Flutter!');
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 
   @override
   Widget build(BuildContext context) {
+    var questions = ['First Question?', 'Second Question?'];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -20,7 +27,9 @@ class myApp extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            Text('Test'),
+            Text(
+              questions[questionIndex],
+            ),
             RaisedButton(
               child: Text('HI Ola'),
               onPressed: answerQuestion,
@@ -33,6 +42,7 @@ class myApp extends StatelessWidget {
               child: Text('HI Ola 2'),
               onPressed: () {
                 // Longer functions
+                answerQuestion();
               },
             )
           ],
