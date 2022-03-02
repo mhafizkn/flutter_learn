@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   var questionIndex = 0;
 
-  void answerQuestion() {    
+  void answerQuestion() {
     setState(() {
       questionIndex = questionIndex + 1;
     });
@@ -38,7 +38,7 @@ class MyAppState extends State<MyApp> {
               questions[questionIndex],
             ),
             RaisedButton(
-              child: Text('HI Ola'),
+              child: Text('Change questions'),
               onPressed: answerQuestion,
             ),
             RaisedButton(
@@ -46,7 +46,7 @@ class MyAppState extends State<MyApp> {
               onPressed: () => print('Hi Flutter!'), // Shortcut
             ),
             RaisedButton(
-              child: Text('HI Ola 2'),
+              child: Text('Question Index'),
               onPressed: () {
                 // Longer functions
                 answerQuestion();
